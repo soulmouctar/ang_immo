@@ -36,6 +36,10 @@ export class PropertiesService {
     this.propertiesSubject.next(this.properties);
   }
 
+  createProperties(property){
+    this.properties.push(property)
+  }
+
   getProperties(){
     // LES PROMISSES
     // return new Promise(
