@@ -1,3 +1,4 @@
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Injectable } from '@angular/core';
 import { rejects } from 'assert';
 import { Observable, Subject } from 'rxjs';
@@ -53,6 +54,11 @@ export class PropertiesService {
     this.properties.push(property)
   }
 
+  deleteProperty(index:any){
+    this.properties.splice(index,1);
+    this.emitProperties();
+  }
+
   getProperties(){
     // LES PROMISSES
     // return new Promise(
@@ -77,6 +83,13 @@ export class PropertiesService {
         observer.error(error)
       }
     })
+
+  }
+
+
+  updateProperty(property, index){
+    this.properties[index]=property;
+    this.emitProperties();
   }
 
 
