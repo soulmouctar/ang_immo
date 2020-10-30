@@ -13,16 +13,29 @@ export class PropertiesService {
     {
       title : 'Ma super maison',
       category : 'Maison',
+      surface : 50,
+      rooms : 2,
       sold : true
     },
     {
       title : 'Petit appartement ',
       category : 'Appartement',
+      surface : 30,
+      rooms : 7,
       sold : false
     },
     {
       title : 'Villa dans la ville',
       category : 'Villa',
+      surface : 100,
+      rooms : 4,
+      sold : true
+    },
+    {
+      title : 'Une chambre et une douche',
+      category : 'Entrer couché',
+      surface : 100,
+      rooms : 1,
       sold : true
     }
 
