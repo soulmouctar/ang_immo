@@ -16,6 +16,10 @@
           </div>
         </div>
         <P> {{ property.category }} de {{ property.surface }} m²  et de {{ property.rooms }} pièces </P>
+        <p>
+          <span class="text-primary" *ngIf="property.sold"> Vendu </span>
+          <span class="text-danger" *ngIf="!property.sold" > A vendre </span>
+        </p>
       </div>
     </div>
 
