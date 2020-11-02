@@ -3,6 +3,7 @@ import { NgForm, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { PropertiesService } from 'src/app/services/properties.service';
 import * as $ from 'jquery';
+import { Property } from 'src/app/interfaces/property';
 
 @Component({
   selector: 'app-admin-properties',
@@ -47,7 +48,7 @@ export class AdminPropertiesComponent implements OnInit {
   }
 
   onSubmitPropertiesForm(){
-    const newProperty = this.propertiesForm.value;
+    const newProperty: Property = this.propertiesForm.value;
     if(this.editMode){
       this.propertiesService.updateProperty(newProperty, this.indexToUpdate);
     }else{
